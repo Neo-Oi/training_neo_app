@@ -1,4 +1,15 @@
-# createメソッドの例
-User.create(name: 'abc', email: 'abc@example.com',encrypted_password:"pass")
-User.create(name: 'def', email: 'def@example.com',encrypted_password:"pass")
-User.create(name: 'xyz', email: 'xyz@example.com',encrypted_password:"pass")
+users = [
+  { name: "abc", email: "abc@example.com", role: "guest" },
+  { name: "def", email: "def@example.com", role: "guest" },
+  { name: "xyz", email: "xyz@example.com", role: "guest" },
+  { name: "admin", email: "admin@example.com", role: "admin" }
+]
+
+users.each do |user_data|
+  user = User.find_or_initialize_by(email: user_data[:email])
+  user.name = user_data[:name]
+  user.role = user_data[:role]
+  user.password = "password"
+  user.password_confirmation = "password"
+  user.save!
+end

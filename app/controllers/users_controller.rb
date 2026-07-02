@@ -1,4 +1,4 @@
-class GuestsController < ApplicationController
+class UsersController < ApplicationController
 before_action :user_init
 
 def user_init

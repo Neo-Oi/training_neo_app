@@ -1,8 +1,8 @@
 users = [
-  { name: "abc", email: "abc@example.com", role: "guest" },
-  { name: "def", email: "def@example.com", role: "guest" },
-  { name: "xyz", email: "xyz@example.com", role: "guest" },
-  { name: "admin", email: "admin@example.com", role: "admin" }
+  { name: "abc", email: "abc@example.com", role: 0},
+  { name: "def", email: "def@example.com", role: 0},
+  { name: "xyz", email: "xyz@example.com", role: 0},
+  { name: "admin", email: "admin@example.com", role: 1}
 ]
 
 users.each do |user_data|

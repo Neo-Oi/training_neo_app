@@ -1,2 +1,4 @@
-<h1>guests/show</h1>
+<h1>guests/show(個人用)</h1>
+<h2>ログイン中:<%= current_user.name %></h2>
 <%= button_to "ログアウト", destroy_user_session_path, method: :delete %>
+<%= link_to "管理者top", users_path %>

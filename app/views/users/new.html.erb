@@ -1,2 +1,17 @@
 <h1>users/new(管理者のみ)</h1>
+<%= form_with(model: @user, local: true) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+<br>
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+<br>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+<br>
+    <%= f.label :role %>
+    <%= f.select :role,[["一般ユーザー","member"],["管理ユーザー","admin"]] %>
+<br>
+    <%= f.submit "新規ユーザー登録" %>
+<% end %>
 <%= button_to "ログアウト", destroy_user_session_path, method: :delete %>

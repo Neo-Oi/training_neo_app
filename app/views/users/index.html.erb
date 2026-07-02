@@ -1,3 +1,4 @@
 <h1>guests/index</h1>
 <h2>ログイン中:<%= current_user.name %></h2>
+<%= link_to "新規作成" , new_user_path %>
 <%= button_to "ログアウト", destroy_user_session_path, method: :delete %>
